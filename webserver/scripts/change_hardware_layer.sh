@@ -66,6 +66,13 @@ elif [ "$1" == "rpi" ]; then
     echo rpi > ../scripts/openplc_platform
     echo rpi > ../scripts/openplc_driver
 
+elif [ "$1" == "arm" ]; then
+    echo "Activating Armtronix GPIO driver"
+    cp ./hardware_layers/armtronix_gpio_board.cpp ./hardware_layer.cpp
+    echo "Setting Platform"
+    echo rpi > ../scripts/openplc_platform
+    echo arm > ../scripts/openplc_driver
+
 elif [ "$1" == "rpi_old" ]; then
     echo "Activating Raspberry Pi 2011 driver"
     cp ./hardware_layers/raspberrypi_old.cpp ./hardware_layer.cpp

@@ -1310,6 +1310,8 @@ def hardware():
             else: return_str += "<option value='pixtend_2l'>PiXtend 2l</option>"  
             if (current_driver == "rpi"): return_str += "<option selected='selected' value='rpi'>Raspberry Pi</option>"
             else: return_str += "<option value='rpi'>Raspberry Pi</option>"
+            if (current_driver == "arm"): return_str += "<option selected='selected' value='arm'>Armtronix GPIO</option>"
+            else: return_str += "<option value='arm'>Armtronix GPIO</option>"
             if (current_driver == "rpi_old"): return_str += "<option selected='selected' value='rpi_old'>Raspberry Pi - Old Model (2011 model B)</option>"
             else: return_str += "<option value='rpi_old'>Raspberry Pi - Old Model (2011 model B)</option>"
             if (current_driver == "simulink"): return_str += "<option selected='selected' value='simulink'>Simulink</option>"
@@ -1874,8 +1876,7 @@ if __name__ == '__main__':
             row = cur.fetchone()
             openplc_runtime.project_name = str(row[1])
             openplc_runtime.project_description = str(row[2])
-            openplc_runtime.project_file = str(row[3])
-            
+            openplc_runtime.project_file = str(row[3])            
             cur.execute("SELECT * FROM Settings")
             rows = cur.fetchall()
             cur.close()
