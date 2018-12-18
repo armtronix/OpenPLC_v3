@@ -7,7 +7,7 @@ The OpenPLC Project consists of three sub-projects:
 <br/>
 To install:
 <br/>
-git clone https://github.com/thiagoralves/OpenPLC_v3.git
+git clone https://github.com/armtronix/OpenPLC_v3.git
 <br/>
 cd OpenPLC_v3
 <br/>
